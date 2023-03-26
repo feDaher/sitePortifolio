@@ -51,6 +51,8 @@ const StyledLink = styled.a`
   border-radius: 25px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
   :hover{
     background-color: #909090;
   }
@@ -77,8 +79,8 @@ const Home = () => {
         <H1>Daher</H1>
         <StyledP>Web Developer</StyledP>
         <StyledDivLink>
-          <StyledLink>Resume</StyledLink>
-          <StyledLink>Portfolio</StyledLink>
+          <StyledLink href="#resume">Resume</StyledLink>
+          <StyledLink href="#portfolio">Portfolio</StyledLink>
         </StyledDivLink>
       </StyledContainer>
       <StyledDivIcon>

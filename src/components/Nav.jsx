@@ -73,6 +73,7 @@ const Nav = () => {
       <StyledUlist>
         <StyledList><StyledLink href="#home">Home</StyledLink></StyledList>
         <StyledList><StyledLink href="#about">About</StyledLink></StyledList>
+        <StyledList><StyledLink href="#resume">Resume</StyledLink></StyledList>
         <StyledList><StyledLink href="#portfolio">Portfolio</StyledLink></StyledList>
       </StyledUlist>
       <StyledDivMobile>
