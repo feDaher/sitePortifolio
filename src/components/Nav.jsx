@@ -11,7 +11,7 @@ const StyledNav = styled.nav`
   position: absolute;
   background: transparent;
   position: fixed;
-  transition: 1.5s ease-out;
+  transition: 1s ease-out;
   &.scroll{
     background-color: #212A3B;
     opacity: 0.8;
