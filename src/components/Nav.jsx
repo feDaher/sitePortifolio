@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { GoDeviceMobile } from 'react-icons/go'
+import { useState, useEffect } from "react"
 
 const StyledNav = styled.nav`
   height: 60px;
@@ -9,6 +10,12 @@ const StyledNav = styled.nav`
   z-index: 1;
   position: absolute;
   background: transparent;
+  position: fixed;
+  transition: 1.5s ease-out;
+  &.scroll{
+    background-color: #212A3B;
+    opacity: 0.8;
+  }
 `
 const StyledUlist = styled.ul`
   display: flex;
@@ -21,10 +28,6 @@ const StyledList = styled.li`
   list-style: none;
   color: white;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
-  :hover{
-    color: #4D82ED;
-  }
 `
 const StyledDivMobile = styled.div`
   color: white;
@@ -39,19 +42,45 @@ const StyledIcon = styled(GoDeviceMobile)`
   font-size: 20px;
   margin-right: 10px;
 `
+const StyledLink = styled.a`
+  color: white;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+  :hover{
+    color: #4D82ED;
+  }
+`
+
 const Nav = () => {
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 100) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <StyledNav>
+    <>
+    <div id="home"></div>
+    <StyledNav className={scroll ? 'scroll' : ''}>
       <StyledUlist>
-        <StyledList><a>Home</a></StyledList>
-        <StyledList><a>About</a></StyledList>
-        <StyledList><a>Portfolio</a></StyledList>
+        <StyledList><StyledLink href="#home">Home</StyledLink></StyledList>
+        <StyledList><StyledLink href="#about">About</StyledLink></StyledList>
+        <StyledList><StyledLink href="#portfolio">Portfolio</StyledLink></StyledList>
       </StyledUlist>
       <StyledDivMobile>
           <StyledIcon />
           <span>(33) 9 8411-6107</span>
         </StyledDivMobile>
     </StyledNav>
+    </>
   )
 }
 

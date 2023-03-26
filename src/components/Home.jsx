@@ -3,6 +3,7 @@ import { AiFillLinkedin } from 'react-icons/ai'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { FaFacebook } from 'react-icons/fa'
 import { BsWhatsapp } from 'react-icons/bs'
+import { FaGithub } from 'react-icons/fa'
 
 const StyledHeader = styled.header`
   display: flex;
@@ -84,6 +85,7 @@ const Home = () => {
         <StyledIcon href="https://www.linkedin.com/in/felipe-daher/" target='_blank'><AiFillLinkedin /></StyledIcon>
         <StyledIcon href="https://www.instagram.com/daher_fe/" target='_blank'><AiOutlineInstagram /></StyledIcon>
         <StyledIcon href="https://www.facebook.com/felipe.daher.9/" target='_blank'><FaFacebook /></StyledIcon>
+        <StyledIcon href="https://github.com/feDaher" target='_blank'><FaGithub /></StyledIcon>
         <StyledIcon title="(33) 9 8411-6107" target='_blank'><BsWhatsapp /></StyledIcon>
       </StyledDivIcon>
     </StyledHeader>
