@@ -8,11 +8,12 @@ const GlobalStyle = createGlobalStyle`
   html{
     scroll-behavior: smooth;
     ::-webkit-scrollbar {
-    background-color: whitesmoke;
+    background-color: #B1B5BE;
+    width: 10px;
   }
   ::-webkit-scrollbar-thumb {
     background-color: #333333;
-    border-radius: 5px;
+    border-radius: 15px;
   }
   ::-webkit-scrollbar-thumb:hover {
    background-color: #555555;
