@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import { GoDeviceMobile } from 'react-icons/go'
 import { useState, useEffect } from "react"
+import Fade from "react-reveal/Fade"
 
 const StyledNav = styled.nav`
-  height: 60px;
+  height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -19,9 +20,11 @@ const StyledNav = styled.nav`
 `
 const StyledUlist = styled.ul`
   display: flex;
+  align-items: center;
   padding-left: 50px;
-  line-height: 60px;
+  line-height: 50px;
   gap: 50px;
+  color: white;
 `
 const StyledList = styled.li`
   text-decoration: none;
@@ -31,16 +34,25 @@ const StyledList = styled.li`
 `
 const StyledDivMobile = styled.div`
   color: white;
-  margin-left: auto;
-  margin-right: 30px;
-  line-height: 60px;
-  @media(max-width: 500px) {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  transition: 0.7s ease-in-out;
+  :hover{
+    color: #4D82ED;
+  }
+  @media(max-width: 600px) {
     display: none;
   }
 `
 const StyledIcon = styled(GoDeviceMobile)`
   font-size: 20px;
   margin-right: 10px;
+  color: white;
+  transition: 0.7s ease-in-out;
+  :hover{
+    color: #4D82ED;
+  }
 `
 const StyledLink = styled.a`
   color: white;
@@ -70,16 +82,18 @@ const Nav = () => {
     <>
     <div id="home"></div>
     <StyledNav className={scroll ? 'scroll' : ''}>
-      <StyledUlist>
-        <StyledList><StyledLink href="#home">Home</StyledLink></StyledList>
-        <StyledList><StyledLink href="#about">About</StyledLink></StyledList>
-        <StyledList><StyledLink href="#resume">Resume</StyledLink></StyledList>
-        <StyledList><StyledLink href="#portfolio">Portfolio</StyledLink></StyledList>
-      </StyledUlist>
-      <StyledDivMobile>
-          <StyledIcon />
-          <span>(33) 9 8411-6107</span>
-        </StyledDivMobile>
+      <Fade top>
+        <StyledUlist>
+          <StyledList><StyledLink href="#home">Home</StyledLink></StyledList>
+          <StyledList><StyledLink href="#about">About</StyledLink></StyledList>
+          <StyledList><StyledLink href="#resume">Resume</StyledLink></StyledList>
+          <StyledList><StyledLink href="#portfolio">Portfolio</StyledLink></StyledList>
+          <StyledDivMobile>
+            <StyledIcon />
+            <span>(33) 9 8411-6107</span>
+          </StyledDivMobile>
+        </StyledUlist>
+      </Fade>
     </StyledNav>
     </>
   )

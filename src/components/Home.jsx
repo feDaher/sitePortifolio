@@ -4,6 +4,8 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 import { FaFacebook } from 'react-icons/fa'
 import { BsWhatsapp } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
+import Slide from 'react-reveal/Slide'
+import { Fade } from "react-reveal"
 
 const StyledHeader = styled.header`
   display: flex;
@@ -74,22 +76,26 @@ const StyledIcon = styled.a`
 const Home = () => {
   return (
     <StyledHeader>
-      <StyledContainer>
-        <H2>Felipe</H2>
-        <H1>Daher</H1>
-        <StyledP>Web Developer</StyledP>
-        <StyledDivLink>
-          <StyledLink href="#resume">Resume</StyledLink>
-          <StyledLink href="#portfolio">Portfolio</StyledLink>
-        </StyledDivLink>
-      </StyledContainer>
-      <StyledDivIcon>
-        <StyledIcon href="https://www.linkedin.com/in/felipe-daher/" target='_blank'><AiFillLinkedin /></StyledIcon>
-        <StyledIcon href="https://www.instagram.com/daher_fe/" target='_blank'><AiOutlineInstagram /></StyledIcon>
-        <StyledIcon href="https://www.facebook.com/felipe.daher.9/" target='_blank'><FaFacebook /></StyledIcon>
-        <StyledIcon href="https://github.com/feDaher" target='_blank'><FaGithub /></StyledIcon>
-        <StyledIcon title="(33) 9 8411-6107" target='_blank'><BsWhatsapp /></StyledIcon>
-      </StyledDivIcon>
+        <Slide top>
+          <StyledContainer>
+            <H2>Felipe</H2>
+            <H1>Daher</H1>
+            <StyledP>Web Developer</StyledP>
+            <StyledDivLink>
+              <StyledLink href="#resume">Resume</StyledLink>
+              <StyledLink href="#portfolio">Portfolio</StyledLink>
+            </StyledDivLink>
+          </StyledContainer>
+        </Slide>
+        <Fade clear>
+          <StyledDivIcon>
+            <StyledIcon href="https://www.linkedin.com/in/felipe-daher/" target='_blank'><AiFillLinkedin /></StyledIcon>
+            <StyledIcon href="https://www.instagram.com/daher_fe/" target='_blank'><AiOutlineInstagram /></StyledIcon>
+            <StyledIcon href="https://www.facebook.com/felipe.daher.9/" target='_blank'><FaFacebook /></StyledIcon>
+            <StyledIcon href="https://github.com/feDaher" target='_blank'><FaGithub /></StyledIcon>
+            <StyledIcon title="(33) 9 8411-6107" target='_blank'><BsWhatsapp /></StyledIcon>
+          </StyledDivIcon>
+        </Fade>
     </StyledHeader>
   )
 }
