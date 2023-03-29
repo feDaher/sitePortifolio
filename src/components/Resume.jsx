@@ -10,18 +10,15 @@ import Zoom from 'react-reveal/Zoom'
 
 
 const StyledContainer = styled.div`
-  min-height: 50vh;
-  background: url('resume.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: 100vh;
+  background-color: black;
   color: white;
   padding-bottom: 10px;
 `
 const StyledPositionTitle = styled.div`
   display: flex;
   justify-content: space-around;
-  padding-top: 60px;
+  padding-top: 50px;
 `
 const StyledH1 = styled.h1`
   display: flex;
@@ -113,7 +110,94 @@ const Resume = () => {
           </Zoom>
         </StyledContainerIcon>
         <div>
-         <StyledH1>Experience:</StyledH1>
+        <Zoom botton>
+         <StyledContainerIcon>
+          <StyledH1>Experience:</StyledH1>
+           <TestDiv>
+            <StyledDivIcon>
+                <IoLogoJavascript />
+                <StyledDescription>- Javascript -</StyledDescription>
+              </StyledDivIcon>
+            <StyledDivIcon>
+              <TbBrandTypescript />
+              <StyledDescription>- Typescript -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+              <FaReact />
+              <StyledDescription>- React -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <AiOutlineHtml5 />
+              <StyledDescription>- HTML -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <DiCss3 />
+              <StyledDescription>- CSS -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <GrNode />
+              <StyledDescription>- Node.js -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <SiStyledcomponents />
+              <StyledDescription>- Styled Components -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <SiMongodb />
+              <StyledDescription>- No-SQL -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <SiPostgresql />
+              <StyledDescription>- SQL -</StyledDescription>
+            </StyledDivIcon>
+            </TestDiv>
+          </StyledContainerIcon>
+        </Zoom>
+        </div>
+        <div>
+         <Zoom botton>
+         <StyledContainerIcon>
+          <StyledH1>Education:</StyledH1>
+           <TestDiv>
+            <StyledDivIcon>
+                <IoLogoJavascript />
+                <StyledDescription>- Javascript -</StyledDescription>
+              </StyledDivIcon>
+            <StyledDivIcon>
+              <TbBrandTypescript />
+              <StyledDescription>- Typescript -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+              <FaReact />
+              <StyledDescription>- React -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <AiOutlineHtml5 />
+              <StyledDescription>- HTML -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <DiCss3 />
+              <StyledDescription>- CSS -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <GrNode />
+              <StyledDescription>- Node.js -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <SiStyledcomponents />
+              <StyledDescription>- Styled Components -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <SiMongodb />
+              <StyledDescription>- No-SQL -</StyledDescription>
+            </StyledDivIcon>
+            <StyledDivIcon>
+            <SiPostgresql />
+              <StyledDescription>- SQL -</StyledDescription>
+            </StyledDivIcon>
+            </TestDiv>
+          </StyledContainerIcon>
+        </Zoom>
         </div>
       </StyledPositionTitle>
     </StyledContainer>
